@@ -1,14 +1,14 @@
 import * as webpack from 'webpack';
 import {validate} from 'jsonschema';
 import pad = require('pad');
-/*const replace = require('replace-in-file');
+const replace = require('replace-in-file');
 
 replace.sync({
     files: 'src/meta.json',
     from: /{BUILD_TIMESTAMP}/g,
     to: new Date().toISOString(),
     allowEmptyPaths: true
-});*/
+});
 
 const npmPackage = require('./package.json');
 const metadata = require('./src/meta.json');

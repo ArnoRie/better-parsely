@@ -3,9 +3,9 @@
   "name": "better-parsely",
   "namespace": "arnorie.github.io",
   "description": "Improvements for parsely.io",
-  "version": "2020-01-01T16:24:02.659Z",
-  "downloadURL": "http://localhost:8080/better-parsely.user.js",
-  "updateURL": "http://localhost:8080/better-parsely.user.js",
+  "version": "{BUILD_TIME}",
+  "downloadURL": "https://arnorie.github.io/better-parsely.user.js",
+  "updateURL": "https://arnorie.github.io/better-parsely.user.js",
   "require": [
     "https://unpkg.com/react@16/umd/react.production.min.js",
     "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
