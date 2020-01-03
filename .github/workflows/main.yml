@@ -11,7 +11,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
 
-    - run: npm --version
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
 
     - name: Build
       run: npm run-script build
