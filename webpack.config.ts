@@ -1,14 +1,14 @@
 import * as webpack from 'webpack';
 import {validate} from 'jsonschema';
 import pad = require('pad');
-const replace = require('replace-in-file');
+/*const replace = require('replace-in-file');
 
 replace.sync({
     files: 'src/meta.json',
     from: /{BUILD_TIMESTAMP}/g,
     to: new Date().toISOString(),
     allowEmptyPaths: true
-});
+});*/
 
 const npmPackage = require('./package.json');
 const metadata = require('./src/meta.json');
@@ -47,7 +47,8 @@ function generateHeader(metadata: IMetadata) {
     return lines.join('\n');
 }
 
-export default <webpack.Configuration> {
+
+const config: webpack.Configuration = {
     entry: './src/index.tsx',
     output: {
         filename: `./dist/${npmPackage.name}.user.js`
@@ -59,9 +60,9 @@ export default <webpack.Configuration> {
     module: {
         rules: [
             //{ test: /\.tsx?$/, use: 'ts-loader' },
-            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+            {test: /\.tsx?$/, loader: "awesome-typescript-loader"},
             // { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-            { test: /\.css$/, use: ['style-loader', 'css-loader'] }
+            {test: /\.css$/, use: ['style-loader', 'css-loader']}
         ]
     },
     plugins: [
@@ -76,3 +77,5 @@ export default <webpack.Configuration> {
         "react-dom": "ReactDOM"
     }
 };
+
+export default config;
