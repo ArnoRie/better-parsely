@@ -1,0 +1,60 @@
+/* Add custom CSS rules to be injected into pages here. */
+
+.ability {
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-size: contain;
+}
+
+.hover-highlight {
+    margin-right: 4px;
+}
+
+.hover-highlight:hover {
+    box-shadow: 0 0 2px 2px yellow;
+}
+
+.highlighted-ability {
+    box-shadow: 0 0 2px 2px green;
+}
+
+.dialog-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.dialog {
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    padding: 10px;
+    pointer-events: initial;
+}
+
+.ability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 32px);
+    grid-template-rows: repeat(auto-fill, 32px);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    overflow: hidden; 
+}
+
+.ability-float {
+    float: left;
+}
+
+.glyphicon.spinning.glyphicon-refresh {
+    transform-origin: 48% 50%;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}

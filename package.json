@@ -1,0 +1,38 @@
+{
+  "name": "better-parsely",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack --progress",
+    "watch": "webpack --watch",
+    "serve": "light-server --serve dist --port 8080",
+    "build:prod": "webpack --progress --config webpack.prod.config.ts --define process.env.NODE_ENV=\"production\""
+  },
+  "keywords": [
+    "userscript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/greasemonkey": "0.0.28",
+    "@types/node": "^7.0.29",
+    "@types/pad": "^1.0.0",
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "@types/webpack": "^2.2.15",
+    "awesome-typescript-loader": "^4.0.1",
+    "css-loader": "^0.28.4",
+    "jsonschema": "^1.1.1",
+    "light-server": "^2.4.0",
+    "pad": "^1.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "replace-in-file": "^5.0.2",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.1.0",
+    "ts-node": "^3.0.6",
+    "typescript": "^2.7.2",
+    "webpack": "^2.7.0"
+  }
+}
