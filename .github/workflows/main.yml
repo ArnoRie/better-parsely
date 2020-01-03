@@ -16,9 +16,11 @@ jobs:
         npm install
         npm run-script build
    
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.1.1
+    - name: Deploy
+      uses: crazy-max/ghaction-github-pages@v1
       with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages 
-        FOLDER: dist
+        repo: ArnoRie/arnorie.github.io
+        target_branch: master
+        build_dir: dist
+      env:
+        GITHUB_PAT: ${{ secrets.ACCESS_TOKEN }}
